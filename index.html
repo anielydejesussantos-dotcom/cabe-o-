@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Amor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <div id="lock-screen" class="screen">
+            <div class="lock-content">
+                
+                <div class="polaroid-frame">
+                    <div class="polaroid-photo" style="background-image: url('polaroid_lock.jpg');"></div> 
+                    <p class="polaroid-text">Eu te amo ❤️</p>
+                </div>
+
+                <h2>Minha Senha</h2>
+                <p>uma data especial para nós</p>
+
+                <div id="password-display" class="password-display"></div>
+
+                <div class="keypad">
+                    <button class="keypad-button" data-key="1">1</button>
+                    <button class="keypad-button" data-key="2">2</button>
+                    <button class="keypad-button" data-key="3">3</button>
+                    <button class="keypad-button" data-key="4">4</button>
+                    <button class="keypad-button" data-key="5">5</button>
+                    <button class="keypad-button" data-key="6">6</button>
+                    <button class="keypad-button" data-key="7">7</button>
+                    <button class="keypad-button" data-key="8">8</button>
+                    <button class="keypad-button" data-key="9">9</button>
+                    <button class="keypad-button" data-key="*">*</button>
+                    <button class="keypad-button" data-key="0">0</button>
+                    <button class="keypad-button clear" data-key="X"><i class="fas fa-backspace"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div id="menu-screen" class="screen" style="display: none;">
+            <div class="screen-header">
+                <h1>Menu do Nosso Amor ❤️</h1>
+                <p>juntos para sempre ❤️</p>
+            </div>
+
+            <div class="menu-grid">
+                <div class="menu-card" data-target="memories-screen">
+                    <div class="menu-icon">🎥</div>
+                    <h3>Nossas Memórias</h3>
+                    <p>momentos preciosos com você ❤️</p>
+                </div>
+
+                <div class="menu-card" data-target="calendar-screen">
+                    <div class="menu-icon">📅</div>
+                    <h3>Calendário do Nosso Amor 💕</h3>
+                    <p>contador de tempo do nosso amor ❤️</p>
+                </div>
+
+                <div class="menu-card" data-target="memory-game-screen">
+                    <div class="menu-icon">🧩</div>
+                    <h3>Jogo da Memória</h3>
+                    <p>combine as peças 💝</p>
+                </div>
+
+                <div class="menu-card" data-target="love-notes-screen">
+                    <div class="menu-icon">💌</div>
+                    <h3>Notas de Amor</h3>
+                    <p>mensagens de amor para você 💌</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="memories-screen" class="screen" style="display: none;">
+            <button class="back-button" data-target="menu-screen">Voltar</button>
+            <div class="screen-header">
+                <h1>Nossos melhores momentos</h1>
+            </div>
+            
+            <div class="memories-content stack-container">
+                <div class="stack-photo" style="background-image: url('memoria_8.jpg');"></div>
+                <div class="stack-photo" style="background-image: url('memoria_7.jpg');"></div>
+                <div class="stack-photo" style="background-image: url('memoria_6.jpg');"></div>
+                <div class="stack-photo" style="background-image: url('memoria_5.jpg');"></div>
+                <div class="stack-photo" style="background-image: url('memoria_4.jpg');"></div>
+                <div class="stack-photo" style="background-image: url('memoria_3.jpg');"></div>
+                <div class="stack-photo" style="background-image: url('memoria_2.jpg');"></div>
+                <div class="stack-photo" style="background-image: url('memoria_1.jpg');"></div> </div>
+        </div>
+
+        <div id="calendar-screen" class="screen" style="display: none;">
+            <button class="back-button" data-target="menu-screen">Voltar</button>
+            <div class="screen-header">
+                <h1>Nossa jornada do amor</h1>
+                <p>quanto tempo de amor já vivemos?</p>
+            </div>
+            
+            <div class="counter-container">
+                <p>❤️</p>
+                <div class="circular-photo" style="background-image: url('circulo_amor.jpg');"></div>
+
+                <div class="counter-box">
+                    <div class="counter-item"><span id="years" class="counter-number">0</span><span class="counter-label">Anos</span></div>
+                    <span>:</span>
+                    <div class="counter-item"><span id="months" class="counter-number">0</span><span class="counter-label">Meses</span></div>
+                    <span>:</span>
+                    <div class="counter-item"><span id="days" class="counter-number">0</span><span class="counter-label">Dias</span></div>
+                </div>
+
+                <div class="counter-box">
+                    <div class="counter-item"><span id="hours" class="counter-number">0</span><span class="counter-label">Horas</span></div>
+                    <span>:</span>
+                    <div class="counter-item"><span id="minutes" class="counter-number">0</span><span class="counter-label">Minutos</span></div>
+                    <span>:</span>
+                    <div class="counter-item"><span id="seconds" class="counter-number">0</span><span class="counter-label">Segundos</span></div>
+                </div>
+
+                <p class="counter-message">
+                    ❤️ tempo que os nossos corações batem juntos ❤️
+                </p>
+            </div>
+        </div>
+
+        <div id="memory-game-screen" class="screen" style="display: none;">
+            <button class="back-button" data-target="menu-screen">Voltar</button>
+                        <div class="screen-header">
+                <h1>Um joguinho para você</h1>
+                <p>tente acertar todas as fotos</p>
+            </div>
+            
+            <div id="game-grid" class="game-grid">
+                </div>
+        </div>
+
+        <div id="love-notes-screen" class="screen" style="display: none;">
+            <button class="back-button" data-target="menu-screen">Voltar</button>
+            <div class="screen-header">
+                <h1>Notas de Amor</h1>
+                <p>mensagens de amor para você 💌</p>
+            </div>
+            
+            <div class="notes-content">
+                <div class="love-letter-envelope" onclick="openLetter()">
+                    </div>
+
+                <div id="love-letter-text" class="love-letter-text">
+                    Meu cabeção 🤭
+                    Há três anos, Deus me deu o presente mais lindo da minha vida: você. Desde então, aprendi que o amor verdadeiro não está apenas nas palavras bonitas, mas sim nos gestos simples, nos abraços apertados, nas risadas compartilhadas e até mesmo nas nossas pequenas brigas, que sempre terminam em reconciliação cheia de carinho.
+                    Com você eu descobri que amar é dividir sonhos, medos e conquistas. São três anos de companheirismo, de mãos dadas nas vitórias e também nos dias difíceis. Três anos de uma história que cresce e se fortalece a cada capítulo, mostrando que o nosso amor não é passageiro, mas sim algo construído com paciência, cuidado e verdade.
+                    Eu olho para trás e vejo quantas coisas já vivemos juntos: quantos sorrisos sinceros você tirou de mim, quantos momentos especiais dividimos, quantas vezes você me fez sentir a pessoa mais amada do mundo. Você é o meu porto seguro, meu confidente, meu amigo e meu amor em uma única pessoa. E é por isso que eu sei que quero passar todos os próximos anos da minha vida ao seu lado.
+                    Você me faz ser melhor todos os dias. Me apoia nas minhas loucuras, me escuta mesmo quando eu falo sem parar, me entende sem que eu precise explicar. Nosso jeito de nos conectar é único, como se nossas almas se reconhecessem em silêncio. E eu admiro profundamente essa ligação que só nós temos, algo que vai além do que eu poderia imaginar quando começamos.
+                    Meu homenzinho, nesses três anos você me ensinou o que é amar de verdade. Você me mostrou que o amor é cuidado, paciência, reconquista diária e entrega sincera. E eu quero muito mais: quero continuar construindo nosso lar, realizando nossos sonhos, vivendo novas aventuras e multiplicando cada sorriso ao seu lado.
+                    Não existem palavras que expressem tudo o que sinto, mas se existe uma certeza na minha vida é que eu te amo. Te amo no hoje, no amanhã e em todos os dias que ainda virão. Obrigada por ser quem você é e por me fazer tão feliz.
+                    <br><br>
+                    Te amo meu menino ❤️😭😭 
+                    <br>
+                    E essa música me faz lembrar a gente 😍 
+                    <a href="https://youtu.be/pp1oSt4QzjA?si=bUcu_MSzWKEE2FF4" target="_blank">Ouvir Música no YouTube</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bubble-badge">Built on Bubble</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
